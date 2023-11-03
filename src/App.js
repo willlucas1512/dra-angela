@@ -146,6 +146,16 @@ function App() {
             >
               Publicações
             </Link>
+            <Link
+              // href={"#publicacoes"}
+              fontSize={"14px"}
+              fontStyle={"normal"}
+              fontWeight={"600"}
+              lineHeight={"24px"}
+              letterSpacing={"0.2px"}
+            >
+              Instagram
+            </Link>
 
             <Button
               onClick={onOpen}
@@ -554,12 +564,13 @@ function App() {
         px={["16px", "120px"]}
       >
         <VStack
+          filter={"drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7))"}
           borderRadius={"5px"}
           m={["16px", "24px 0 24px 24px"]}
           maxW={["100%", "60%"]}
           p={["24px", "48px"]}
           color={"#fff"}
-          bg={"#2f2f2f"}
+          bg={"rgba(47, 47, 47, 0.5)"}
         >
           <Text
             fontSize={"24px"}
