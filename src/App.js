@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Email from "vercel-email";
 import {
   Text,
   Box,
@@ -41,6 +42,19 @@ function App() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const [value, setValue] = useState("1");
+
+  const sendEmail = async () => {
+    await Email.send({
+      to: "willlucas1512@gmail.com",
+      from: "willlucas1512@gmail.com",
+      subject: "Hello World",
+      text: "Hello World",
+    });
+  };
+
+  useEffect(() => {
+    sendEmail();
+  }, []);
 
   return (
     <Box>
@@ -1270,5 +1284,5 @@ function App() {
     </Box>
   );
 }
-
+export const runtime = "edge";
 export default App;
