@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Email from "vercel-email";
 import {
   Text,
   Box,
@@ -21,13 +20,12 @@ import {
   ModalHeader,
   ModalCloseButton,
   ModalBody,
-  ModalFooter,
-  Input,
-  Textarea,
-  FormControl,
-  FormLabel,
-  RadioGroup,
-  Radio,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  DrawerHeader,
+  DrawerBody,
 } from "@chakra-ui/react";
 import AreaAccordion from "./AreaAccordion";
 import ConsultaStep from "./ConsultaStep";
@@ -36,25 +34,16 @@ import ReactCaroussel from "react-caroussel";
 import "react-caroussel/dist/index.css";
 import EvaluationCard from "./EvaluationCard";
 import PublicationCard from "./PublicationCard";
+import CalendlyWidget from "./CalendlyWidget";
 
 function App() {
   const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");
   const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const [value, setValue] = useState("1");
-
-  const sendEmail = async () => {
-    await Email.send({
-      to: "willlucas1512@gmail.com",
-      from: "willlucas1512@gmail.com",
-      subject: "Hello World",
-      text: "Hello World",
-    });
-  };
-
-  useEffect(() => {
-    sendEmail();
-  }, []);
+  const {
+    isOpen: isOpenSideMenu,
+    onOpen: onOpenSideMenu,
+    onClose: onCloseSideMenu,
+  } = useDisclosure();
 
   return (
     <Box>
@@ -78,9 +67,13 @@ function App() {
           >
             {" "}
             <Image width={"200px"} height={"50px"} src={"./logo2.svg"} />{" "}
-            <IconButton bg={"transparent"}>
+            <IconButton
+              _hover={{ bg: "rgba(255,255,255, 0.4)" }}
+              onClick={onOpenSideMenu}
+              bg={"transparent"}
+            >
               <Image
-                marginRight={["16px", "32px", "40px"]}
+                // pr={["16px", "32px", "40px"]}
                 width={"22px"}
                 height={"13px"}
                 src={"./iconmenu.svg"}
@@ -161,7 +154,7 @@ function App() {
               Publicações
             </Link>
             <Link
-              // href={"#publicacoes"}
+              href={"#instagram"}
               fontSize={"14px"}
               fontStyle={"normal"}
               fontWeight={"600"}
@@ -265,6 +258,7 @@ function App() {
       {/* Áreas de atuação */}
       <Box
         id={"areasdeatuacao"}
+        scrollMarginTop={["82px", "103px"]}
         p={["16px", "32px 120px"]}
         bg={"url('/bg-areas.png')"}
         backgroundSize={"cover"}
@@ -570,6 +564,7 @@ function App() {
       {/* Sobre mim */}
       <Stack
         id={"sobremim"}
+        scrollMarginTop={["82px", "103px"]}
         flexDirection={["column", "column", "row", "row"]}
         justifyContent={"center"}
         alignItems={["flex-end"]}
@@ -657,6 +652,7 @@ function App() {
       {/* Telemedicina */}
       <Box
         id={"telemedicina"}
+        scrollMarginTop={["82px", "103px"]}
         px={["16px", "120px"]}
         bg={"url('./bg-telemed.png')"}
         backgroundSize={"cover"}
@@ -739,7 +735,7 @@ function App() {
       </Box>
 
       {/* Dinâmica das consultas */}
-      <Box id={"dinamica"}>
+      <Box id={"dinamica"} scrollMarginTop={["82px", "103px"]}>
         {" "}
         <Center flexDirection={"column"}>
           <Text
@@ -817,7 +813,13 @@ function App() {
       </Box>
 
       {/* Dúvidas frequentes */}
-      <Box id={"duvidas"} pb={"32px"} px={["16px", "120px"]} bg={"#fafafa"}>
+      <Box
+        id={"duvidas"}
+        scrollMarginTop={["82px", "103px"]}
+        pb={"32px"}
+        px={["16px", "120px"]}
+        bg={"#fafafa"}
+      >
         <Center flexDirection={"column"}>
           <Text
             color={"#2f2f2f"}
@@ -880,7 +882,7 @@ function App() {
       </Box>
 
       {/* Avaliações */}
-      <Box id={"avaliacoes"} mb={"32px"}>
+      <Box id={"avaliacoes"} scrollMarginTop={["82px", "103px"]} mb={"32px"}>
         {" "}
         <Center flexDirection={"column"}>
           <Text
@@ -954,6 +956,7 @@ function App() {
       {/* Publicações */}
       <Box
         id={"publicacoes"}
+        scrollMarginTop={["82px", "103px"]}
         pb={"32px"}
         bg={"url('./bg-publicacoes.png')"}
         backgroundSize={"cover"}
@@ -1047,6 +1050,34 @@ function App() {
         </Center>
       </Box>
 
+      {/* Instagram */}
+      <Box
+        id={"instagram"}
+        scrollMarginTop={["82px", "103px"]}
+        pb={"40px"}
+        bg={"rgba(194, 96, 5, 0.54)"}
+      >
+        <Center flexDirection={"column"}>
+          <Text
+            color={"#fff"}
+            textAlign={"center"}
+            my={"32px"}
+            fontSize={"28px"}
+            fontStyle={"normal"}
+            fontWeight={"700"}
+            lineHeight={"57px"}
+            letterSpacing={"0.2px"}
+          >
+            Instagram
+          </Text>
+          <iframe
+            width="75%"
+            height="440"
+            src="https://www.instagram.com/angelarodrigues.psiq/embed/"
+          ></iframe>
+        </Center>
+      </Box>
+
       {/* Footer 1 */}
       <Stack
         justifyContent={"space-evenly"}
@@ -1075,7 +1106,7 @@ function App() {
             </a>
             <a
               href={
-                "https://wa.me/5521971207732?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
+                "https://wa.me/5521967958731?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
               }
               target="_blank"
               rel="noopener noreferrer"
@@ -1105,10 +1136,15 @@ function App() {
               lineHeight={"24px"}
               letterSpacing={"0.2px"}
             >
-              R. Visc. de Pirajá, 621 - Ipanema, Rio de Janeiro - RJ, 22410-003
+              Rua General Artigas, 516, Leblon, Rio de Janeiro - RJ, 22441-140
             </Text>
           </HStack>
-          <Image src={"/map.png"} />
+          <iframe
+            src="https://maps.google.com/maps?q=R.+Gen.+Artigas,+516+-+Leblon,+Rio+de+Janeiro+-+RJ,+22441-140&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+            width="300"
+            height="150"
+            allowFullScreen
+          ></iframe>
         </VStack>
         <VStack alignItems={"flex-start"}>
           <Text
@@ -1144,7 +1180,7 @@ function App() {
               lineHeight={"24px"}
               letterSpacing={"0.2px"}
             >
-              (21) 99999-9999
+              +55 (21) 96795-8731
             </Text>
           </HStack>
         </VStack>
@@ -1179,94 +1215,161 @@ function App() {
             flexDirection={"column"}
             gap={"16px"}
           >
-            <FormControl>
-              <FormLabel
-                color={"#2f2f2f"}
-                fontSize={"14px"}
-                fontStyle={"normal"}
-                fontWeight={"600"}
-                lineHeight={"24px"}
-                letterSpacing={"0.2px"}
+            <CalendlyWidget />
+            <Text
+              mt={"-16px"}
+              color={"#2f2f2f"}
+              textAlign={"center"}
+              fontSize={"12px"}
+              fontStyle={"normal"}
+              fontWeight={"300"}
+              letterSpacing={"0.2px"}
+            >
+              Caso prefira agendar pelo Whatsapp, clique aqui:
+            </Text>
+            <Center>
+              <Link
+                href={
+                  "https://wa.me/5521967958731?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
+                }
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Nome completo*
-              </FormLabel>
-              <Input placeholder={"Nome completo"} />
-            </FormControl>
-            <FormControl>
-              <FormLabel
-                color={"#2f2f2f"}
-                fontSize={"14px"}
-                fontStyle={"normal"}
-                fontWeight={"600"}
-                lineHeight={"24px"}
-                letterSpacing={"0.2px"}
-              >
-                Celular*
-              </FormLabel>
-              <Input placeholder={"Celular"} />
-            </FormControl>
-            <FormControl>
-              <FormLabel
-                color={"#2f2f2f"}
-                fontSize={"14px"}
-                fontStyle={"normal"}
-                fontWeight={"600"}
-                lineHeight={"24px"}
-                letterSpacing={"0.2px"}
-              >
-                E-mail*
-              </FormLabel>
-              <Input placeholder={"E-mail"} />
-            </FormControl>
-            <FormControl>
-              <RadioGroup onChange={setValue} value={value}>
-                <Stack direction="row">
-                  <Radio value="1">Presencial</Radio>
-                  <Radio value="2">Online</Radio>
-                </Stack>
-              </RadioGroup>
-            </FormControl>
-            <FormControl>
-              <FormLabel
-                color={"#2f2f2f"}
-                fontSize={"14px"}
-                fontStyle={"normal"}
-                fontWeight={"600"}
-                lineHeight={"24px"}
-                letterSpacing={"0.2px"}
-              >
-                Horário*
-              </FormLabel>
-              <Input placeholder={"Horário"} />
-            </FormControl>
-            <FormControl>
-              <FormLabel
-                color={"#2f2f2f"}
-                fontSize={"14px"}
-                fontStyle={"normal"}
-                fontWeight={"600"}
-                lineHeight={"24px"}
-                letterSpacing={"0.2px"}
-              >
-                Comentário*
-              </FormLabel>
-              <Textarea placeholder={"Comentário"} />
-            </FormControl>
+                <Button
+                  rightIcon={<img src={"/whatsapp(1).png"} />}
+                  color={"white"}
+                  bgColor={"#29a71a"}
+                >
+                  Agendar pelo Whatsapp
+                </Button>
+              </Link>
+            </Center>
           </ModalBody>
-
-          <ModalFooter>
-            <Button w={"100%"} colorScheme="blue" onClick={onClose}>
-              Agendar consulta
-            </Button>
-          </ModalFooter>
         </ModalContent>
       </Modal>
+
+      <Drawer
+        isOpen={isOpenSideMenu}
+        placement="right"
+        onClose={onCloseSideMenu}
+      >
+        <DrawerOverlay />
+        <DrawerContent bg={"#D87348"}>
+          <DrawerCloseButton color={"white"} />
+          <DrawerHeader>
+            <Image width={"140px"} height={"30px"} src={"./logo2.svg"} />
+          </DrawerHeader>
+
+          <DrawerBody
+            gap={"16px"}
+            color={"white"}
+            display={"flex"}
+            flexDirection={"column"}
+          >
+            {" "}
+            <Link
+              onClick={onCloseSideMenu}
+              href={"#sobremim"}
+              fontSize={"14px"}
+              fontStyle={"normal"}
+              fontWeight={"500"}
+              lineHeight={"24px"}
+              letterSpacing={"0.2px"}
+            >
+              Sobre mim
+            </Link>
+            <Link
+              onClick={onCloseSideMenu}
+              href={"#telemedicina"}
+              fontSize={"14px"}
+              fontStyle={"normal"}
+              fontWeight={"500"}
+              lineHeight={"24px"}
+              letterSpacing={"0.2px"}
+            >
+              Telemedicina
+            </Link>
+            <Link
+              onClick={onCloseSideMenu}
+              href={"#dinamica"}
+              fontSize={"14px"}
+              fontStyle={"normal"}
+              fontWeight={"500"}
+              lineHeight={"24px"}
+              letterSpacing={"0.2px"}
+            >
+              Dinâmica das consultas
+            </Link>
+            <Link
+              onClick={onCloseSideMenu}
+              href={"#duvidas"}
+              fontSize={"14px"}
+              fontStyle={"normal"}
+              fontWeight={"500"}
+              lineHeight={"24px"}
+              letterSpacing={"0.2px"}
+            >
+              Dúvidas frequentes
+            </Link>
+            <Link
+              onClick={onCloseSideMenu}
+              href={"#avaliacoes"}
+              fontSize={"14px"}
+              fontStyle={"normal"}
+              fontWeight={"500"}
+              lineHeight={"24px"}
+              letterSpacing={"0.2px"}
+            >
+              Avaliações
+            </Link>
+            <Link
+              onClick={onCloseSideMenu}
+              href={"#publicacoes"}
+              fontSize={"14px"}
+              fontStyle={"normal"}
+              fontWeight={"500"}
+              lineHeight={"24px"}
+              letterSpacing={"0.2px"}
+            >
+              Publicações
+            </Link>
+            <Link
+              onClick={onCloseSideMenu}
+              href={"#instagram"}
+              fontSize={"14px"}
+              fontStyle={"normal"}
+              fontWeight={"500"}
+              lineHeight={"24px"}
+              letterSpacing={"0.2px"}
+            >
+              Instagram
+            </Link>
+            <Button
+              onClick={() => {
+                onOpen();
+                onCloseSideMenu();
+              }}
+              fontSize={"14px"}
+              fontStyle={"normal"}
+              fontWeight={"700"}
+              lineHeight={"22px"}
+              letterSpacing={"0.2px"}
+              p={"15px 36px"}
+              borderRadius={"0px"}
+              bg={"#23A6F0"}
+              color={"white"}
+            >
+              Agendar consulta
+            </Button>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
 
       {/* CTA Whatsapp */}
       <Link
         zIndex={"10"}
         href={
-          "https://wa.me/5521971207732?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
+          "https://wa.me/5521967958731?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
         }
         target="_blank"
         rel="noopener noreferrer"
