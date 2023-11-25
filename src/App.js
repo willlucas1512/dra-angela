@@ -66,7 +66,12 @@ function App() {
             justifyContent={"space-between"}
           >
             {" "}
-            <Image width={"200px"} height={"50px"} src={"./logo2.svg"} />{" "}
+            <Image
+              mt={"-10px"}
+              width={"263px"}
+              height={"64px"}
+              src={"./logo2.svg"}
+            />{" "}
             <IconButton
               _hover={{ bg: "rgba(255,255,255, 0.4)" }}
               onClick={onOpenSideMenu}
@@ -81,109 +86,127 @@ function App() {
             </IconButton>
           </HStack>
         ) : (
-          <HStack
-            zIndex={"3"}
-            bg={"url('/gradient.png')"}
-            backgroundSize={"cover"}
-            position={"fixed"}
-            w={"100%"}
-            top={"0"}
-            mt={"-5px"}
-            justifyContent={"space-evenly"}
-            px={"16px"}
-          >
-            <Image width={"130px"} height={"110px"} src={"./logo.svg"} />
-            <Link
-              href={"#sobremim"}
-              fontSize={"14px"}
-              fontStyle={"normal"}
-              fontWeight={"600"}
-              lineHeight={"24px"}
-              letterSpacing={"0.2px"}
+          <>
+            <Image
+              mt={"8px"}
+              zIndex={"4"}
+              position={"fixed"}
+              left={"40px"}
+              width={"300px"}
+              height={"90px"}
+              src={"./logo2.svg"}
+            />
+            <VStack
+              gap={"16px"}
+              position={"fixed"}
+              w={"100%"}
+              top={"0px"}
+              mt={"-5px"}
+              bg={"url('/gradient.png')"}
+              backgroundSize={"cover"}
+              zIndex={"3"}
+              pl={"340px"}
+              pt={"24px"}
+              pb={"24px"}
+              pr={"40px"}
+              boxShadow={"base"}
             >
-              Sobre mim
-            </Link>
-            <Link
-              href={"#telemedicina"}
-              fontSize={"14px"}
-              fontStyle={"normal"}
-              fontWeight={"600"}
-              lineHeight={"24px"}
-              letterSpacing={"0.2px"}
-            >
-              Telemedicina
-            </Link>
-            <Link
-              href={"#dinamica"}
-              fontSize={"14px"}
-              fontStyle={"normal"}
-              fontWeight={"600"}
-              lineHeight={"24px"}
-              letterSpacing={"0.2px"}
-            >
-              Dinâmica das consultas
-            </Link>
-            <Link
-              href={"#duvidas"}
-              fontSize={"14px"}
-              fontStyle={"normal"}
-              fontWeight={"600"}
-              lineHeight={"24px"}
-              letterSpacing={"0.2px"}
-            >
-              Dúvidas frequentes
-            </Link>
-            <Link
-              href={"#avaliacoes"}
-              fontSize={"14px"}
-              fontStyle={"normal"}
-              fontWeight={"600"}
-              lineHeight={"24px"}
-              letterSpacing={"0.2px"}
-            >
-              Avaliações
-            </Link>
-            <Link
-              href={"#publicacoes"}
-              fontSize={"14px"}
-              fontStyle={"normal"}
-              fontWeight={"600"}
-              lineHeight={"24px"}
-              letterSpacing={"0.2px"}
-            >
-              Publicações
-            </Link>
-            <Link
-              href={"#instagram"}
-              fontSize={"14px"}
-              fontStyle={"normal"}
-              fontWeight={"600"}
-              lineHeight={"24px"}
-              letterSpacing={"0.2px"}
-            >
-              Instagram
-            </Link>
+              <HStack w={"100%"} justifyContent={"flex-end"} gap={"40px"}>
+                <Link
+                  href={"#sobremim"}
+                  fontSize={"14px"}
+                  fontStyle={"normal"}
+                  fontWeight={"600"}
+                  lineHeight={"24px"}
+                  letterSpacing={"0.2px"}
+                >
+                  Sobre mim
+                </Link>
+                <Link
+                  href={"#telemedicina"}
+                  fontSize={"14px"}
+                  fontStyle={"normal"}
+                  fontWeight={"600"}
+                  lineHeight={"24px"}
+                  letterSpacing={"0.2px"}
+                >
+                  Telemedicina
+                </Link>
+                <Link
+                  href={"#dinamica"}
+                  fontSize={"14px"}
+                  fontStyle={"normal"}
+                  fontWeight={"600"}
+                  lineHeight={"24px"}
+                  letterSpacing={"0.2px"}
+                >
+                  Dinâmica das consultas
+                </Link>
 
-            <Button
-              onClick={onOpen}
-              fontSize={"14px"}
-              fontStyle={"normal"}
-              fontWeight={"700"}
-              lineHeight={"22px"}
-              letterSpacing={"0.2px"}
-              p={"15px 36px"}
-              borderRadius={"0px"}
-              bg={"#23A6F0"}
-              color={"white"}
-            >
-              Agendar consulta
-            </Button>
-          </HStack>
+                <Button
+                  onClick={onOpen}
+                  fontSize={"14px"}
+                  fontStyle={"normal"}
+                  fontWeight={"700"}
+                  lineHeight={"22px"}
+                  letterSpacing={"0.2px"}
+                  p={"15px 36px"}
+                  borderRadius={"0px"}
+                  bg={"#23A6F0"}
+                  color={"white"}
+                >
+                  Agendar consulta
+                </Button>
+              </HStack>
+              <HStack w={"100%"} justifyContent={"flex-end"} gap={"40px"}>
+                <Link
+                  href={"#avaliacoes"}
+                  fontSize={"14px"}
+                  fontStyle={"normal"}
+                  fontWeight={"600"}
+                  lineHeight={"24px"}
+                  letterSpacing={"0.2px"}
+                >
+                  Avaliações
+                </Link>
+                <Link
+                  href={"#publicacoes"}
+                  fontSize={"14px"}
+                  fontStyle={"normal"}
+                  fontWeight={"600"}
+                  lineHeight={"24px"}
+                  letterSpacing={"0.2px"}
+                >
+                  Publicações
+                </Link>
+                <Link
+                  href={"#instagram"}
+                  fontSize={"14px"}
+                  fontStyle={"normal"}
+                  fontWeight={"600"}
+                  lineHeight={"24px"}
+                  letterSpacing={"0.2px"}
+                >
+                  Instagram
+                </Link>
+                <Link
+                  href={"#duvidas"}
+                  fontSize={"14px"}
+                  fontStyle={"normal"}
+                  fontWeight={"600"}
+                  lineHeight={"24px"}
+                  letterSpacing={"0.2px"}
+                >
+                  Dúvidas frequentes
+                </Link>
+              </HStack>
+            </VStack>
+          </>
         )}
 
         <Stack
           px={["0", "120px"]}
-          pt={["82px", "110px"]}
+          pt={["82px", "180px"]}
           flexDirection={["column", "row", "row"]}
           alignItems={["center", "center", "flex-end"]}
         >
@@ -194,7 +217,7 @@ function App() {
             alignItems={"flex-start"}
           >
             <Text
-              fontSize={["50px", "58px"]}
+              fontSize={["50px", "56px"]}
               fontStyle={"normal"}
               fontWeight={"800"}
               lineHeight={"80px"}
@@ -1248,6 +1271,7 @@ function App() {
         </ModalContent>
       </Modal>
 
+      {/* Side menu */}
       <Drawer
         isOpen={isOpenSideMenu}
         placement="right"
@@ -1257,7 +1281,12 @@ function App() {
         <DrawerContent bg={"#D87348"}>
           <DrawerCloseButton color={"white"} />
           <DrawerHeader>
-            <Image width={"140px"} height={"30px"} src={"./logo2.svg"} />
+            <Image
+              mt={"-16px"}
+              width={"247px"}
+              height={"69px"}
+              src={"./logo2.svg"}
+            />
           </DrawerHeader>
 
           <DrawerBody
