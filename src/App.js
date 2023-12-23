@@ -159,7 +159,7 @@ function App() {
                 </Button>
               </HStack>
               <HStack w={"100%"} justifyContent={"flex-end"} gap={"40px"}>
-                <Link
+                {/* <Link
                   href={"#avaliacoes"}
                   fontSize={"14px"}
                   fontStyle={"normal"}
@@ -168,7 +168,7 @@ function App() {
                   letterSpacing={"0.2px"}
                 >
                   Avaliações
-                </Link>
+                </Link> */}
                 <Link
                   href={"#publicacoes"}
                   fontSize={"14px"}
@@ -213,13 +213,12 @@ function App() {
           <VStack
             alignSelf={"flex-start"}
             p={"5% 10% 16px 5%"}
-            mr={["0", "-10%", "-10%"]}
             alignItems={"flex-start"}
           >
             <Text
               fontSize={["50px", "56px"]}
               fontStyle={"normal"}
-              fontWeight={"800"}
+              fontWeight={"100"}
               lineHeight={"80px"}
               letterSpacing={"0.2px"}
             >
@@ -228,11 +227,12 @@ function App() {
             <Text
               fontSize={"20px"}
               fontStyle={"normal"}
-              fontWeight={"700"}
+              fontWeight={"200"}
               lineHeight={"30px"}
               letterSpacing={"0.2px"}
             >
-              Psiquiatria | CRM 115876
+              Médica | Psiquiatria
+              {/* | CRM 115876 */}
             </Text>
             <Text zIndex={"1"} my={"32px"}>
               Cuidar da saúde mental é um dos maiores atos de resiliência
@@ -271,8 +271,8 @@ function App() {
           </VStack>
           <Image
             zIndex={"0"}
-            mb={["-2px", "-20px", "-2px"]}
-            w={["250px", "250px", "300px"]}
+            mb={"0"}
+            w={["300px", "300px", "330px"]}
             h={["400px", "400px", "450px"]}
             src={"/angela1.png"}
           />
@@ -589,16 +589,21 @@ function App() {
         id={"sobremim"}
         scrollMarginTop={["82px", "103px"]}
         flexDirection={["column", "column", "row", "row"]}
-        justifyContent={"center"}
+        justifyContent={"flex-start"}
         alignItems={["flex-end"]}
         bg={"rgba(194, 96, 5, 0.54)"}
         gap={"-20px"}
-        px={["16px", "120px"]}
+        // px={["16px", "120px"]}
       >
+        <Image
+          w={["100%", "550px"]}
+          h={["100%", "400px", "450px"]}
+          src={"/angela2.png"}
+        />
         <VStack
           filter={"drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7))"}
           borderRadius={"5px"}
-          m={["16px", "24px 0 24px 24px"]}
+          m={["16px", "24px 0"]}
           maxW={["100%", "60%"]}
           p={["24px", "48px"]}
           color={"#fff"}
@@ -629,13 +634,8 @@ function App() {
             </b>
             , atuo como pesquisadora colaboradora no{" "}
             <b>Programa de Ansiedade, Obsessões e Compulsões</b> do Instituto de
-            Psiquiatria (IPUB-UFRJ), além de atuar como pesquisadora
-            colaboradora de{" "}
-            <b>
-              projetos de pesquisa financiados pelo National Institutes of
-              Health (NIH)
-            </b>
-            . Membro da Associação Brasileira de Psiquiatria - ABP.
+            Psiquiatria (IPUB-UFRJ). Membro da Associação Brasileira de
+            Psiquiatria - ABP.
           </Text>
           <Text
             textAlign={"justify"}
@@ -653,7 +653,7 @@ function App() {
             </b>.{" "}
           </Text>
           <Text
-            textAlign={"center"}
+            textAlign={["justify", "center"]}
             fontSize={"14px"}
             fontStyle={"normal"}
             fontWeight={"700"}
@@ -665,11 +665,6 @@ function App() {
             Psiquiatria.
           </Text>
         </VStack>
-        <Image
-          w={["100%", "400px"]}
-          h={["400px", "400px", "450px"]}
-          src={"/angela2.png"}
-        />
       </Stack>
 
       {/* Telemedicina */}
@@ -860,7 +855,7 @@ function App() {
             <FAQAccordion title={"Como posso agendar uma consulta?"}>
               <Text>
                 Para agendar uma consulta, clique <Link>aqui</Link> ou entre em
-                contato por Whatsapp no (21) 97120-7732.
+                contato por Whatsapp no (21) 96795-8731.
               </Text>
             </FAQAccordion>
             <FAQAccordion
@@ -905,7 +900,7 @@ function App() {
       </Box>
 
       {/* Avaliações */}
-      <Box id={"avaliacoes"} scrollMarginTop={["82px", "103px"]} mb={"32px"}>
+      {/* <Box id={"avaliacoes"} scrollMarginTop={["82px", "103px"]} mb={"32px"}>
         {" "}
         <Center flexDirection={"column"}>
           <Text
@@ -974,7 +969,7 @@ function App() {
             </ReactCaroussel>
           </Box>
         </Center>
-      </Box>
+      </Box> */}
 
       {/* Publicações */}
       <Box
@@ -1104,11 +1099,11 @@ function App() {
       {/* Footer 1 */}
       <Stack
         justifyContent={"space-evenly"}
-        py={"80px"}
+        pt={"32px"}
         px={"16px"}
         flexDirection={["column", "row"]}
       >
-        <VStack alignItems={"flex-start"}>
+        <VStack mb={["16px", "0px"]} alignItems={"flex-start"}>
           <Text
             color={"#2f2f2f"}
             fontSize={"24px"}
@@ -1116,96 +1111,134 @@ function App() {
             fontWeight={"700"}
             lineHeight={"32px"}
             letterSpacing={"0.1px"}
+            mb={"16px"}
           >
-            Redes Sociais
+            Consultórios
           </Text>
-          <HStack>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href={"https://www.instagram.com/angelarodrigues.psiq/"}
+          <Stack gap={"24px !important"} flexDirection={["column", "row"]}>
+            <VStack
+              pb={"32px"}
+              borderBottom={["1px solid #E2E8F0", "none"]}
+              alignItems={"flex-start"}
             >
-              <Image w={"24px"} h={"24px"} src={"/instagram.png"} />
-            </a>
-            <a
-              href={
-                "https://wa.me/5521967958731?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
-              }
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image w={"24px"} h={"24px"} src={"/whatsapp(1).png"} />
-            </a>
-          </HStack>
+              <HStack mr={"40px"} alignItems={"flex-start"}>
+                <Image src={"/google-maps.png"} />
+                <Text
+                  maxW={"250px"}
+                  color={"#2f2f2f"}
+                  fontSize={"14px"}
+                  fontStyle={"normal"}
+                  fontWeight={"500"}
+                  lineHeight={"24px"}
+                  letterSpacing={"0.2px"}
+                >
+                  Rua Conde de Bonfim, 44, Tijuca, Rio de Janeiro - RJ,
+                  20520-053
+                </Text>
+              </HStack>
+              <iframe
+                src="https://maps.google.com/maps?q=/Rua+Conde+de+Bonfim,+44+-+Tijuca,+Rio+de+Janeiro+-+RJ,+20520-053&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                width="300"
+                height="150"
+                allowFullScreen
+              ></iframe>
+            </VStack>
+
+            <VStack alignItems={"flex-start"}>
+              <HStack alignItems={"flex-start"}>
+                <Image src={"/google-maps.png"} />
+                <Text
+                  maxW={"250px"}
+                  color={"#2f2f2f"}
+                  fontSize={"14px"}
+                  fontStyle={"normal"}
+                  fontWeight={"500"}
+                  lineHeight={"24px"}
+                  letterSpacing={"0.2px"}
+                >
+                  Rua General Artigas, 516, Leblon, Rio de Janeiro - RJ,
+                  22441-140
+                </Text>
+              </HStack>
+              <iframe
+                src="https://maps.google.com/maps?q=R.+Gen.+Artigas,+516+-+Leblon,+Rio+de+Janeiro+-+RJ,+22441-140&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                width="300"
+                height="150"
+                allowFullScreen
+              ></iframe>
+            </VStack>
+          </Stack>
         </VStack>
+
         <VStack alignItems={"flex-start"}>
-          <Text
-            color={"#2f2f2f"}
-            fontSize={"24px"}
-            fontStyle={"normal"}
-            fontWeight={"700"}
-            lineHeight={"32px"}
-            letterSpacing={"0.1px"}
-          >
-            Endereço
-          </Text>
-          <HStack>
-            <Image src={"/google-maps.png"} />
+          <VStack mb={"24px"} alignItems={"flex-start"}>
             <Text
               color={"#2f2f2f"}
-              fontSize={"14px"}
+              fontSize={"24px"}
               fontStyle={"normal"}
-              fontWeight={"500"}
-              lineHeight={"24px"}
-              letterSpacing={"0.2px"}
+              fontWeight={"700"}
+              lineHeight={"32px"}
+              letterSpacing={"0.1px"}
             >
-              Rua General Artigas, 516, Leblon, Rio de Janeiro - RJ, 22441-140
+              Redes Sociais
             </Text>
-          </HStack>
-          <iframe
-            src="https://maps.google.com/maps?q=R.+Gen.+Artigas,+516+-+Leblon,+Rio+de+Janeiro+-+RJ,+22441-140&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-            width="300"
-            height="150"
-            allowFullScreen
-          ></iframe>
-        </VStack>
-        <VStack alignItems={"flex-start"}>
-          <Text
-            color={"#2f2f2f"}
-            fontSize={"24px"}
-            fontStyle={"normal"}
-            fontWeight={"700"}
-            lineHeight={"32px"}
-            letterSpacing={"0.1px"}
-          >
-            Contato
-          </Text>
-          <HStack>
-            <Image src={"/email.png"} />
+            <HStack>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={"https://www.instagram.com/angelarodrigues.psiq/"}
+              >
+                <Image w={"24px"} h={"24px"} src={"/instagram.png"} />
+              </a>
+              <a
+                href={
+                  "https://wa.me/5521967958731?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image w={"24px"} h={"24px"} src={"/whatsapp(1).png"} />
+              </a>
+            </HStack>
+          </VStack>
+          <VStack alignItems={"flex-start"}>
             <Text
               color={"#2f2f2f"}
-              fontSize={"14px"}
+              fontSize={"24px"}
               fontStyle={"normal"}
-              fontWeight={"500"}
-              lineHeight={"24px"}
-              letterSpacing={"0.2px"}
+              fontWeight={"700"}
+              lineHeight={"32px"}
+              letterSpacing={"0.1px"}
             >
-              angelarodrigues.psiq@gmail.com
+              Contato
             </Text>
-          </HStack>
-          <HStack>
-            <Image src={"/phone-call.png"} />
-            <Text
-              color={"#2f2f2f"}
-              fontSize={"14px"}
-              fontStyle={"normal"}
-              fontWeight={"500"}
-              lineHeight={"24px"}
-              letterSpacing={"0.2px"}
-            >
-              +55 (21) 96795-8731
-            </Text>
-          </HStack>
+            <HStack>
+              <Image src={"/email.png"} />
+              <Text
+                color={"#2f2f2f"}
+                fontSize={"14px"}
+                fontStyle={"normal"}
+                fontWeight={"500"}
+                lineHeight={"24px"}
+                letterSpacing={"0.2px"}
+              >
+                angelarodrigues.psiq@gmail.com
+              </Text>
+            </HStack>
+            <HStack>
+              <Image src={"/phone-call.png"} />
+              <Text
+                color={"#2f2f2f"}
+                fontSize={"14px"}
+                fontStyle={"normal"}
+                fontWeight={"500"}
+                lineHeight={"24px"}
+                letterSpacing={"0.2px"}
+              >
+                +55 (21) 96795-8731
+              </Text>
+            </HStack>
+          </VStack>
         </VStack>
       </Stack>
 
