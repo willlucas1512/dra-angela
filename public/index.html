@@ -56,6 +56,20 @@
 
       gtag("config", "AW-11438333906");
     </script>
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        setTimeout(function () {
+          document.querySelectorAll('a[href*="wa.me"]').forEach(function (el) {
+            el.addEventListener("click", function () {
+              console.log("whatsapp");
+              gtag("event", "conversion", {
+                send_to: "AW-11438333906/MdYUCOSri4UZENK_nM4q",
+              });
+            });
+          });
+        }, 3000);
+      });
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
