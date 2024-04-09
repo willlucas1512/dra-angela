@@ -205,9 +205,9 @@ function App() {
         )}
 
         <Stack
-          px={["0", "120px"]}
+          px={["0", "0", "0", "120px"]}
           pt={["82px", "180px"]}
-          flexDirection={["column", "row", "row"]}
+          flexDirection={["column", "column", "column", "row", "row"]}
           alignItems={["center", "center", "flex-end"]}
         >
           <VStack
@@ -281,7 +281,7 @@ function App() {
       <Box
         id={"areasdeatuacao"}
         scrollMarginTop={["82px", "103px"]}
-        p={["16px", "32px 120px"]}
+        p={["16px", "16px", "16px", "16px", "32px 120px"]}
         bg={"url('/bg-areas.png')"}
         backgroundSize={"cover"}
         color={"white"}
@@ -304,7 +304,13 @@ function App() {
           flexDirection={["column", "column", "row"]}
           gap={["16px", "16px", "120px"]}
           justifyContent={"center"}
-          alignItems={"flex-start"}
+          alignItems={[
+            "center",
+            "center",
+            "flex-start",
+            "flex-start",
+            "flex-start",
+          ]}
         >
           <Accordion
             gap={"16px"}
@@ -457,6 +463,7 @@ function App() {
             </AreaAccordion>
           </Accordion>
           <Accordion
+            maxW={["400px", "400px", "400px", "400px", "none"]}
             gap={"16px"}
             display={"flex"}
             flexDirection={"column"}
@@ -588,23 +595,23 @@ function App() {
         id={"sobremim"}
         scrollMarginTop={["82px", "103px"]}
         flexDirection={["column", "column", "row", "row"]}
-        justifyContent={"flex-start"}
-        alignItems={["flex-end"]}
+        justifyContent={["center", "center", "flex-start", "flex-start"]}
+        alignItems={["center", "center", "flex-end"]}
         bg={"rgba(194, 96, 5, 0.54)"}
         gap={"-20px"}
         // px={["16px", "120px"]}
       >
         <Image
-          w={["100%", "550px"]}
-          h={["100%", "400px", "450px"]}
+          w={["100%", "100%", "550px"]}
+          h={["100%", "100%", "400px", "450px"]}
           src={"/angela2.png"}
         />
         <VStack
           filter={"drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7))"}
           borderRadius={"5px"}
-          m={["16px", "24px 0"]}
-          maxW={["100%", "60%"]}
-          p={["24px", "48px"]}
+          m={["16px", "16px", "16px", "24px 0"]}
+          maxW={["100%", "100%", "100%", "60%"]}
+          p={["24px", "24px", "24px", "48px"]}
           color={"#fff"}
           bg={"rgba(47, 47, 47, 0.5)"}
         >
@@ -618,6 +625,7 @@ function App() {
             Sobre mim
           </Text>{" "}
           <Text
+            filter={"none !important"}
             textAlign={"justify"}
             fontSize={"14px"}
             fontStyle={"normal"}
@@ -637,6 +645,7 @@ function App() {
             Psiquiatria - ABP.
           </Text>
           <Text
+            filter={"none !important"}
             textAlign={"justify"}
             fontSize={"14px"}
             fontStyle={"normal"}
@@ -652,6 +661,7 @@ function App() {
             </b>.{" "}
           </Text>
           <Text
+            filter={"none !important"}
             textAlign={["justify", "center"]}
             fontSize={"14px"}
             fontStyle={"normal"}
@@ -670,7 +680,7 @@ function App() {
       <Box
         id={"telemedicina"}
         scrollMarginTop={["82px", "103px"]}
-        px={["16px", "120px"]}
+        px={["16px", "16px", "16px", "120px"]}
         bg={"url('./bg-telemed.png')"}
         backgroundSize={"cover"}
       >
@@ -706,9 +716,15 @@ function App() {
             </Text>
             <Stack
               gap={"16px"}
-              alignItems={"flex-start"}
+              alignItems={[
+                "center",
+                "center",
+                "center",
+                "flex-start",
+                "flex-start",
+              ]}
               justifyContent={["center"]}
-              flexDirection={["column", "row"]}
+              flexDirection={["column", "column", "column", "row"]}
             >
               <HStack gap={"16px"} alignItems={"flex-start"} maxW={"400px"}>
                 <Image src={"/relogio.png"} />
@@ -770,7 +786,13 @@ function App() {
           <Grid
             mb={"32px"}
             gap={"16px"}
-            gridTemplateColumns={["300px", "repeat(3, 300px)"]}
+            gridTemplateColumns={[
+              "300px",
+              "300px",
+              "repeat(2, 300px)",
+              "repeat(2, 300px)",
+              "repeat(3, 300px)",
+            ]}
           >
             <ConsultaStep
               number={"1"}
@@ -1100,9 +1122,13 @@ function App() {
         justifyContent={"space-evenly"}
         pt={"32px"}
         px={"16px"}
-        flexDirection={["column", "row"]}
+        flexDirection={["column", "column", "column", "column", "row"]}
+        alignItems={["center", "center", "center", "center", "flex-start"]}
       >
-        <VStack mb={["16px", "0px"]} alignItems={"flex-start"}>
+        <VStack
+          alignItems={["center", "center", "center", "center", "flex-start"]}
+          mb={["16px", "0px"]}
+        >
           <Text
             color={"#2f2f2f"}
             fontSize={"24px"}
@@ -1114,11 +1140,20 @@ function App() {
           >
             Consultórios
           </Text>
-          <Stack gap={"24px !important"} flexDirection={["column", "row"]}>
+          <Grid
+            gap={"24px !important"}
+            gridTemplateColumns={[
+              "1fr",
+              "1fr",
+              "1fr 1fr",
+              "1fr 1fr",
+              "1fr 1fr 1fr",
+            ]}
+          >
             <VStack
               pb={"32px"}
               borderBottom={["1px solid #E2E8F0", "none"]}
-              alignItems={"flex-start"}
+              alignItems={["flex-start", "center"]}
             >
               <HStack mr={"40px"} alignItems={"flex-start"}>
                 <Image src={"/google-maps.png"} />
@@ -1131,8 +1166,7 @@ function App() {
                   lineHeight={"24px"}
                   letterSpacing={"0.2px"}
                 >
-                  Rua Conde de Bonfim, 44, Tijuca, Rio de Janeiro - RJ,
-                  20520-053
+                  Rua Conde de Bonfim, 44, Tijuca, Rio de Janeiro
                 </Text>
               </HStack>
               <iframe
@@ -1143,7 +1177,11 @@ function App() {
               ></iframe>
             </VStack>
 
-            <VStack alignItems={"flex-start"}>
+            <VStack
+              pb={"32px"}
+              borderBottom={["1px solid #E2E8F0", "none"]}
+              alignItems={["flex-start", "center"]}
+            >
               <HStack alignItems={"flex-start"}>
                 <Image src={"/google-maps.png"} />
                 <Text
@@ -1155,8 +1193,7 @@ function App() {
                   lineHeight={"24px"}
                   letterSpacing={"0.2px"}
                 >
-                  Rua General Artigas, 516, Leblon, Rio de Janeiro - RJ,
-                  22441-140
+                  Rua General Artigas, 516, Leblon, Rio de Janeiro
                 </Text>
               </HStack>
               <iframe
@@ -1166,11 +1203,49 @@ function App() {
                 allowFullScreen
               ></iframe>
             </VStack>
-          </Stack>
+
+            <VStack alignItems={["flex-start", "center"]}>
+              <HStack alignItems={"flex-start"}>
+                <Image src={"/google-maps.png"} />
+                <Text
+                  maxW={"250px"}
+                  color={"#2f2f2f"}
+                  fontSize={"14px"}
+                  fontStyle={"normal"}
+                  fontWeight={"500"}
+                  lineHeight={"24px"}
+                  letterSpacing={"0.2px"}
+                >
+                  Estrada dos Três Rios, 1200, Freguesia - Jacarepaguá, RJ
+                </Text>
+              </HStack>
+              <iframe
+                // src="https://maps.google.com/maps?q=Estr.+dos+Três+Rios,+1200+-+Freguesia+(Jacarepaguá),+Rio+de+Janeiro+-+RJ,+22745-005,+Brazil/@-22.9304301,-43.3260163,17z&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.3797463753244!2d-43.334954824911!3d-22.936237679234274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd826dce2754d%3A0xc3ca3a3d8c4eaba3!2sEstr.%20dos%20Tr%C3%AAs%20Rios%2C%201200%20-%20Freguesia%20(Jacarepagu%C3%A1)%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022745-005%2C%20Brazil!5e0!3m2!1sen!2sus!4v1712623448079!5m2!1sen!2sus"
+                width="300"
+                height="150"
+                allowFullScreen
+              ></iframe>
+            </VStack>
+          </Grid>
         </VStack>
 
-        <VStack alignItems={"flex-start"}>
-          <VStack mb={"24px"} alignItems={"flex-start"}>
+        <Stack
+          justifyContent={["center", "flex-start", "center"]}
+          flexDirection={["column", "column", "row", "row", "column"]}
+          m={[
+            "24px 0 24px 0",
+            "24px 0 24px 0",
+            "24px 0 24px 0",
+            "24px 0 24px 0",
+            "0 24px 0 24px",
+          ]}
+        >
+          <VStack
+            w={["300px", "300px", "300px", "300px", "auto"]}
+            mb={"24px"}
+            alignItems={"flex-start"}
+          >
             <Text
               color={"#2f2f2f"}
               fontSize={"24px"}
@@ -1200,7 +1275,10 @@ function App() {
               </a>
             </HStack>
           </VStack>
-          <VStack alignItems={"flex-start"}>
+          <VStack
+            w={["300px", "300px", "300px", "300px", "auto"]}
+            alignItems={"flex-start"}
+          >
             <Text
               color={"#2f2f2f"}
               fontSize={"24px"}
@@ -1238,7 +1316,7 @@ function App() {
               </Text>
             </HStack>
           </VStack>
-        </VStack>
+        </Stack>
       </Stack>
 
       {/* Footer 2 */}
@@ -1253,7 +1331,7 @@ function App() {
             lineHeight={"24px"}
             letterSpacing={"0.2px"}
           >
-            © 2023 WL Software - All Rights Reserved.
+            © 2024 WL Software - All Rights Reserved.
           </Text>
         </Center>
       </Box>
