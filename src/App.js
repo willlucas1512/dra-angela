@@ -1227,6 +1227,33 @@ function App() {
                 allowFullScreen
               ></iframe>
             </VStack>
+
+            <VStack alignItems={["flex-start", "center"]}>
+              <HStack alignItems={"flex-start"}>
+                <Image src={"/google-maps.png"} />
+                <Text
+                  maxW={"250px"}
+                  color={"#2f2f2f"}
+                  fontSize={"14px"}
+                  fontStyle={"normal"}
+                  fontWeight={"500"}
+                  lineHeight={"24px"}
+                  letterSpacing={"0.2px"}
+                >
+                  Av. das Américas, 19005, Recreio, Rio de Janeiro
+                </Text>
+              </HStack>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.627545846314!2d-43.370208399999996!3d-23.000719699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bdbb301540001%3A0x7d9c486e97cdaf75!2sAv.%20das%20Am%C3%A9ricas%2C%2019005%20-%20Barra%20da%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022631-000!5e0!3m2!1sfr!2sbr!4v1718319815819!5m2!1sfr!2sbr"
+                width="300"
+                height="150"
+                allowFullScreen
+                style={{ border: "0" }}
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </VStack>
           </Grid>
         </VStack>
 
