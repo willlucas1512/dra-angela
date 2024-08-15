@@ -886,10 +886,9 @@ function App() {
             </FAQAccordion>
             <FAQAccordion title={"Qual o tempo de duração das consultas?"}>
               <Text>
-                A primeira consulta tem uma duração de 1 hora e 30 minutos para
+                As consultas têm uma duração de cerca de 50 minutos para
                 garantir que tenhamos tempo suficiente para abordar suas
-                necessidades de forma abrangente. As consultas subsequentes
-                geralmente têm uma duração de cerca de 50 minutos.
+                necessidades de forma abrangente.
               </Text>
             </FAQAccordion>
             <FAQAccordion
@@ -906,14 +905,13 @@ function App() {
                 atenta, ao exame físico, à avaliação psiquiátrica e à reflexão,
                 tudo com o objetivo de desenvolver um plano terapêutico
                 personalizado. É importante mencionar que a primeira consulta
-                tem uma duração de 1 hora e 30 minutos para garantir que
-                tenhamos tempo suficiente para explorar suas necessidades de
-                maneira detalhada. Meu objetivo é criar um vínculo de confiança,
-                onde você se sinta genuinamente acolhido. Este é um espaço
-                seguro onde não há espaço para julgamentos morais; você pode
-                compartilhar o que estiver pronto para discutir. Estou aqui para
-                apoiá-lo em sua jornada em direção ao bem-estar emocional e
-                mental.
+                tem uma duração de 50 minutos para garantir que tenhamos tempo
+                suficiente para explorar suas necessidades de maneira detalhada.
+                Meu objetivo é criar um vínculo de confiança, onde você se sinta
+                genuinamente acolhido. Este é um espaço seguro onde não há
+                espaço para julgamentos morais; você pode compartilhar o que
+                estiver pronto para discutir. Estou aqui para apoiá-lo em sua
+                jornada em direção ao bem-estar emocional e mental.
               </Text>
             </FAQAccordion>
           </Accordion>
