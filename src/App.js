@@ -641,8 +641,7 @@ function App() {
             </b>
             , atuo como pesquisadora colaboradora no{" "}
             <b>Programa de Ansiedade, Obsessões e Compulsões</b> do Instituto de
-            Psiquiatria (IPUB-UFRJ). Membro da Associação Brasileira de
-            Psiquiatria - ABP.
+            Psiquiatria (IPUB-UFRJ).
           </Text>
           <Text
             filter={"none !important"}
