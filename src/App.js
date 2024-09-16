@@ -1346,9 +1346,9 @@ function App() {
       <Box bg={"#fafafa"}>
         <Center>
           <Text
-            py={"16px"}
+            py={"8px"}
             color={"#2f2f2f"}
-            fontSize={"14px"}
+            fontSize={"10px"}
             fontStyle={"normal"}
             fontWeight={"600"}
             lineHeight={"24px"}
