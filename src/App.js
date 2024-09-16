@@ -231,7 +231,7 @@ function App() {
               lineHeight={"30px"}
               letterSpacing={"0.2px"}
             >
-              Médica | Psiquiatria | CRM/RJ 129605-1
+              Médica | Doutoranda em Psiquiatria | CRM/RJ 129605-1
             </Text>
             <Text zIndex={"1"} my={"32px"}>
               Cuidar da saúde mental é um dos maiores atos de resiliência
