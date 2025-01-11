@@ -708,10 +708,7 @@ function App() {
               O atendimento psiquiátrico realizado online segue os mesmos
               processos e padrão de qualidade dos atendimentos presenciais.
               Quando necessário, podem ser solicitados exames e prescritos
-              medicamentos, com assinatura digital válida em todo o país. Apenas
-              para medicamentos de faixa azul e amarela (que são a minoria), a
-              receita é enviada via correios, devido às normas do conselho
-              nacional de medicina.
+              medicamentos, com assinatura digital válida em todo o país.
             </Text>
             <Stack
               gap={"16px"}
@@ -881,7 +878,7 @@ function App() {
             <FAQAccordion
               title={"Quais são as formas de pagamento do valor da consulta?"}
             >
-              <Text>PIX, cartão de débito e crédito, MercadoPago.</Text>
+              <Text>PIX, cartão de débito e cartão de crédito.</Text>
             </FAQAccordion>
             <FAQAccordion title={"Qual o tempo de duração das consultas?"}>
               <Text>
@@ -1109,7 +1106,7 @@ function App() {
           <iframe
             width="75%"
             height="440"
-            src="https://www.instagram.com/angelarodrigues.psiq/embed/"
+            src="https://www.instagram.com/dra.angelarodrigues/embed/"
           ></iframe>
         </Center>
       </Box>
@@ -1163,11 +1160,11 @@ function App() {
                   lineHeight={"24px"}
                   letterSpacing={"0.2px"}
                 >
-                  Rua Conde de Bonfim, 44, Tijuca, Rio de Janeiro
+                  Av. das Américas, 5001 - Barra da Tijuca, Rio de Janeiro
                 </Text>
               </HStack>
               <iframe
-                src="https://maps.google.com/maps?q=/Rua+Conde+de+Bonfim,+44+-+Tijuca,+Rio+de+Janeiro+-+RJ,+20520-053&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.5356357377987!2d-43.36497632504198!3d-23.000760741235602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bda493f4c7eff%3A0x5032944a95b8c9bd!2sShopping%20Midtown%20Nova%20Ipanema!5e1!3m2!1sen!2sus!4v1736622341570!5m2!1sen!2sus"
                 width="300"
                 height="150"
                 allowFullScreen
@@ -1190,64 +1187,14 @@ function App() {
                   lineHeight={"24px"}
                   letterSpacing={"0.2px"}
                 >
-                  Rua Almirante Pereira Guimarães, 72, Leblon, Rio de Janeiro
-                </Text>
-              </HStack>
-              <iframe
-                src="https://maps.google.com/maps?q=R.+Alm.+Pereira+Guimarães,+72+-+Leblon,+Rio+de+Janeiro+-+RJ,+22440-005&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-                width="300"
-                height="150"
-                allowFullScreen
-              ></iframe>
-            </VStack>
-
-            <VStack alignItems={["flex-start", "center"]}>
-              <HStack alignItems={"flex-start"}>
-                <Image src={"/google-maps.png"} />
-                <Text
-                  maxW={"250px"}
-                  color={"#2f2f2f"}
-                  fontSize={"14px"}
-                  fontStyle={"normal"}
-                  fontWeight={"500"}
-                  lineHeight={"24px"}
-                  letterSpacing={"0.2px"}
-                >
                   Estrada dos Três Rios, 1200, Freguesia - Jacarepaguá, RJ
                 </Text>
               </HStack>
               <iframe
-                // src="https://maps.google.com/maps?q=Estr.+dos+Três+Rios,+1200+-+Freguesia+(Jacarepaguá),+Rio+de+Janeiro+-+RJ,+22745-005,+Brazil/@-22.9304301,-43.3260163,17z&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.3797463753244!2d-43.334954824911!3d-22.936237679234274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd826dce2754d%3A0xc3ca3a3d8c4eaba3!2sEstr.%20dos%20Tr%C3%AAs%20Rios%2C%201200%20-%20Freguesia%20(Jacarepagu%C3%A1)%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022745-005%2C%20Brazil!5e0!3m2!1sen!2sus!4v1712623448079!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6650.22577859566!2d-43.334986425044285!3d-22.93662073893722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd94062b3120f%3A0xb5af6528386450f6!2sIDEALE%20OFFICES!5e1!3m2!1sen!2sus!4v1736622301861!5m2!1sen!2sus"
                 width="300"
                 height="150"
                 allowFullScreen
-              ></iframe>
-            </VStack>
-            <VStack alignItems={["flex-start", "center"]}>
-              <HStack alignItems={"flex-start"}>
-                <Image src={"/google-maps.png"} />
-                <Text
-                  maxW={"250px"}
-                  color={"#2f2f2f"}
-                  fontSize={"14px"}
-                  fontStyle={"normal"}
-                  fontWeight={"500"}
-                  lineHeight={"24px"}
-                  letterSpacing={"0.2px"}
-                >
-                  Av. das Américas, 5001 - Barra da Tijuca, Rio de Janeiro
-                </Text>
-              </HStack>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.627545846314!2d-43.370208399999996!3d-23.000719699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bdbb301540001%3A0x7d9c486e97cdaf75!2sAv.%20das%20Am%C3%A9ricas%2C%205001%20-%20Barra%20da%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022631-000!5e0!3m2!1sfr!2sbr!4v1718319815819!5m2!1sfr!2sbr"
-                width="300"
-                height="150"
-                allowFullScreen
-                style={{ border: "0" }}
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
             </VStack>
           </Grid>
@@ -1283,7 +1230,7 @@ function App() {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href={"https://www.instagram.com/angelarodrigues.psiq/"}
+                href={"https://www.instagram.com/dra.angelarodrigues/"}
               >
                 <Image w={"24px"} h={"24px"} src={"/instagram.png"} />
               </a>
